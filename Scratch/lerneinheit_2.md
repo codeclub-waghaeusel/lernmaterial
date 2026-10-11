@@ -6,7 +6,7 @@
 
 ## Lernziel
 
-Du verstehst, dass die Reihenfolge von Blöcken in Scratch wichtig ist, und weißt, wie du auf verschiedene Auslöser (z. B. Klick oder Taste) reagieren kannst. Am Ende hast du ein erstes kleines Klickspiel programmiert.
+Du verstehst, dass die Reihenfolge von Blöcken in Scratch wichtig ist, und weißt, wie du verschiedene Auslöser (z. B. Klick oder Taste) verwenden kannst. Am Ende hast du ein erstes kleines Klickspiel programmiert.
 
 ---
 
@@ -158,7 +158,7 @@ Wenn du die Flagge mehrmals klickst, wird die Figur immer kleiner. Das wollen wi
     [gehe zu zufälliger Position]        ← Bewegung (blau)
 ```
 
-> 💡 **Warum steht das vor der Schleife?** Die Blöcke *vor* „wiederhole fortlaufend" werden nur **einmal** ausgeführt – gleich beim Start. Die Blöcke *innerhalb* der Schleife laufen immer und immer wieder. Die Reihenfolge der Blöcke macht also auch hier den Unterschied!
+> 💡 **Warum steht das vor dem "Wiederhole fortlaufend"-Block?** Die Blöcke *vor* „wiederhole fortlaufend" werden nur **einmal** ausgeführt – gleich beim Start. Die Blöcke *innerhalb* des "Wiederholen fortlaufen"-Blocks laufen immer und immer wieder. Die Reihenfolge der Blöcke macht also auch hier den Unterschied!
 
 **Teste das Spiel:** Klicke die Flagge mehrmals hintereinander. Startet die Figur jedes Mal wieder in normaler Größe?
 

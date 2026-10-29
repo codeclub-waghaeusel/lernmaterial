@@ -40,17 +40,13 @@ Beantworte dann:
 | Frage | Deine Antwort |
 | ----- | ------------- |
 | Wie viele Zeilen hat dein Zettel, wenn du **alle 8 Durchgänge** aufschreibst? | |
-| Nach der Probe wollt ihr „stampfen“ durch „hüpfen“ ersetzen. An wie vielen Stellen musst du den Zettel ändern, wenn du alles aufgeschrieben hast? Und wenn du deine kurze Version benutzt? | |
+| Nach der Probe wollt ihr „stampfen“ durch „hüpfen“ ersetzen. An wie vielen Stellen musst du den Zettel ändern, wenn du alles aufgeschrieben hast? | |
 
-Hast Du eine Idee, wie Du die Liste auf Deinem Zettel kürzer machen könntest? Schreib deine Idee auf.
+Hast du eine Idee, wie du die Liste auf deinem Zettel kürzer machen könntest? Schreib deine Idee auf. An wie vielen Stellen müsstest du dann „stampfen" durch „hüpfen" ersetzen?
 
 ____________________________________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________________________________
-
-> 🟠 **Mentor-Moment (ca. 5 min)**
->
-> Bespreche Deine Idee mit dem Mentor.
 
 ### Schritt 2 – Wiederholungen im Alltag *(7 min)*
 
@@ -59,8 +55,8 @@ Auch im Alltag gibt es Wiederholungen. Es gibt drei Arten, und jede hört anders
 | Alltags-Situation | Art der Wiederholung |
 | ----------------- | -------------------- |
 | Du putzt dir so lange die Zähne, bis die Sanduhr abgelaufen ist | ...wiederhole fortlaufend (hört nie von selbst auf) |
-| Dein Herz schlägt – solange du lebst | ...wiederhole 10-mal (feste Anzahl) |
-| Du machst 10 Liegestütze | ...wiederhole bis <Bedingung> (hört auf, wenn etwas wahr wird) |
+| Dein Lieblingslied läuft in der Playlist auf Dauerschleife | ...wiederhole 10-mal (feste Anzahl) |
+| Du machst 10 Liegestütze | ...wiederhole bis ... (hört auf, wenn etwas wahr wird) |
 
 > Tipp: Die rechte Spalte ist bewusst durcheinander. Lies jede Zeile genau!
 
@@ -68,19 +64,17 @@ Auch im Alltag gibt es Wiederholungen. Es gibt drei Arten, und jede hört anders
 
 ### Schritt 3 – Wie oft läuft die Schleife? *(5 min)*
 
-Lies den Code und ergänze die Lücken im Text:
+Ein Rasenmäher-Roboter bekommt diese Anweisung:
 
-```
-[wiederhole 4 mal]
-    [gehe 10 Schritte]
-    [drehe dich um 90 Grad nach rechts]
-```
+> **Wiederhole 4-mal:** Fahre 10 Meter geradeaus. Drehe dich um 90 Grad nach rechts.
 
-Die Figur macht insgesamt _____ Schritte und dreht sich insgesamt um _____ Grad. Am Ende schaut sie in ____________________ Richtung wie am Anfang.
+Ergänze die Lücken:
+
+Der Roboter fährt insgesamt _____ Meter und dreht sich insgesamt um _____ Grad. Am Ende steht er an der ____________________ Stelle wie am Anfang und schaut in ____________________ Richtung.
 
 > 🟠 **Mentor-Moment (ca. 5 min)**
 >
-> Zeige dem Mentor deine Antworten aus den Schritten 2 und 3.
+> Zeige dem Mentor deine Antworten aus den Schritten 1 bis 3.
 
 ---
 
@@ -94,11 +88,13 @@ Die Figur macht insgesamt _____ Schritte und dreht sich insgesamt um _____ Grad.
 
 Baue dieses Skript und teste es:
 
-```shell
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [wiederhole 4 mal]                       ← Steuerung (orange)
     [gehe 50 Schritte]                   ← Bewegung (blau)
+    [warte 0.5 Sekunden]                 ← Steuerung (orange)
     [drehe dich um 90 Grad nach rechts]  ← Bewegung (blau)
+    [warte 0.5 Sekunden]                 ← Steuerung (orange)
 ```
 
 Hake ab, was du beobachtet hast:
@@ -109,12 +105,12 @@ Hake ab, was du beobachtet hast:
 
 ### Schritt 3 – Wiederhole bis *(6 min)*
 
-Ersetze die Schleife durch diese Version:
+Lösche das Skript der Katze und baue dieses neue:
 
-```shell
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [gehe zu x: -200 y: 0]                   ← Bewegung (blau)
-[wiederhole bis <x-Position > 200>]      ← Steuerung (orange)
+[wiederhole bis <(x-Position) > 200>]    ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
     [gehe 10 Schritte]                   ← Bewegung (blau)
 [sage "Angekommen!" für 2 Sekunden]      ← Aussehen (lila)
 ```
@@ -125,6 +121,8 @@ Ersetze die Schleife durch diese Version:
 - `x-Position` → Kategorie **Bewegung** (blau), ganz unten
 - `>` → Kategorie **Operatoren** (grün)
 
+> 💡 **Tipp:** Ziehe zuerst den grünen Block `>` in das Feld von „wiederhole bis". Dann ziehst du den runden Block `x-Position` in sein **linkes** Feld (nicht eintippen!) und tippst `200` in das rechte.
+
 Hake ab:
 
 - [ ] Die Figur läuft von links nach rechts über die Bühne
@@ -133,10 +131,10 @@ Hake ab:
 
 ### Schritt 4 – Wiederhole fortlaufend *(6 min)*
 
-Jetzt eine Schleife, die nie aufhört:
+Jetzt eine Schleife, die nie aufhört. Lösche das Skript wieder und baue:
 
-```shell
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [wiederhole fortlaufend]                 ← Steuerung (orange)
     [gehe 5 Schritte]                    ← Bewegung (blau)
     [falls am Rand abprallen]            ← Bewegung (blau)
@@ -157,9 +155,11 @@ Hake ab:
 
 ---
 
-## Phase 3 · Animierter Hintergrund und laufende Figur *(45 min)*
+## Phase 3 · Animierter Hintergrund und laufende Figur *(35 min)*
 
-### Schritt 1 – Hintergrund und Figur vorbereiten *(8 min)*
+### Schritt 1 – Hintergrund und Figur vorbereiten *(6 min)*
+
+Öffne ein **neues Scratch-Projekt**.
 
 1. Wähle einen **Hintergrund**, auf dem Sterne gut aussehen, zum Beispiel „Stars" oder „Space".
 2. Wähle eine **Figur**, die über die Bühne laufen soll (zum Beispiel ein Tier, eine Person oder ein Raumschiff). Sie braucht mindestens **zwei Kostüme** – schau im Reiter *Kostüme* nach.
@@ -169,14 +169,14 @@ Hake ab:
 
 - [ ] Hintergrund ist gewählt
 - [ ] Die laufende Figur hat mindestens zwei Kostüme
-- [ ] Die Stern-Figur steht in der Szene
+- [ ] Die Stern-Figur steht auf der Bühne
 
-### Schritt 2 – Die Figur läuft und prallt ab *(12 min)*
+### Schritt 2 – Die Figur läuft und prallt ab *(8 min)*
 
 Klicke die **laufende Figur** an und baue:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [setze Drehtyp auf links-rechts]         ← Bewegung (blau)
 [wiederhole fortlaufend]                 ← Steuerung (orange)
     [gehe 5 Schritte]                    ← Bewegung (blau)
@@ -185,17 +185,23 @@ Klicke die **laufende Figur** an und baue:
 
 > 💡 **Tipp:** Der Block „setze Drehtyp auf links-rechts" sorgt dafür, dass die Figur beim Abprallen nicht kopfüber läuft, sondern nur nach links oder rechts schaut. Du findest ihn in **Bewegung** (blau), ganz unten.
 
-**Teste:** Läuft die Figur hin und her und schaut sie in die richtige Richtung?
+**Teste:** Klicke die grüne Flagge. Läuft die Figur hin und her und schaut sie in die Richtung, in die sie läuft?
 
-Jetzt soll die Figur beim Laufen auch so aussehen, als würde sie laufen. Füge **in die Schleife** einen zweiten Block ein:
+Jetzt soll die Figur beim Laufen auch so aussehen, als würde sie laufen. Ergänze im Flaggen-Skript der **laufenden Figur** **in der Schleife**, ganz unten, zwei Blöcke:
 
+> 💡 **So liest du die Skripte ab jetzt:** Zeilen mit **+** sind neu, die baust du ein. Zeilen mit **-** nimmst du heraus. **⋮** steht für Blöcke, die bleiben, wie sie sind. Alle anderen Zeilen hast du schon.
+
+```diff
+  [Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
+  [setze Drehtyp auf links-rechts]         ← Bewegung (blau)
+  [wiederhole fortlaufend]                 ← Steuerung (orange)
+      [gehe 5 Schritte]                    ← Bewegung (blau)
+      [falls am Rand abprallen]            ← Bewegung (blau)
++     [wechsle zum nächsten Kostüm]        ← Aussehen (lila)
++     [warte 0.1 Sekunden]                 ← Steuerung (orange)
 ```
-[wiederhole fortlaufend]                 ← Steuerung (orange)
-    [gehe 5 Schritte]                    ← Bewegung (blau)
-    [falls am Rand abprallen]            ← Bewegung (blau)
-    [nächstes Kostüm]                    ← Aussehen (lila)
-    [warte 0.1 Sekunden]                 ← Steuerung (orange)
-```
+
+**Teste:** Klicke die grüne Flagge und schau genau auf die Beine oder Flügel deiner Figur.
 
 Hake ab:
 
@@ -203,12 +209,12 @@ Hake ab:
 - [ ] Sie wechselt beim Laufen ihr Kostüm und sieht lebendig aus
 - [ ] Die Figur läuft nie kopfüber
 
-### Schritt 3 – Der Stern blinkt *(12 min)*
+### Schritt 3 – Der Stern blinkt *(7 min)*
 
 Klicke jetzt die **Stern-Figur** an. Sie soll fünfmal blinken, indem sie sich abwechselnd versteckt und zeigt:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [wiederhole 5 mal]                       ← Steuerung (orange)
     [verstecke dich]                     ← Aussehen (lila)
     [warte 0.3 Sekunden]                 ← Steuerung (orange)
@@ -216,7 +222,7 @@ Klicke jetzt die **Stern-Figur** an. Sie soll fünfmal blinken, indem sie sich a
     [warte 0.3 Sekunden]                 ← Steuerung (orange)
 ```
 
-**Teste:** Blinkt der Stern genau fünfmal und bleibt dann sichtbar?
+**Teste:** Klicke die grüne Flagge und zähle mit. Blinkt der Stern genau fünfmal und bleibt dann sichtbar?
 
 > 💡 **Tipp:** Willst du, dass der Stern langsamer oder schneller blinkt? Ändere die Zeit bei „warte". Willst du mehr oder weniger Blinkvorgänge? Ändere die Zahl bei „wiederhole". Du musst nur **eine** Stelle ändern – genau das ist der Vorteil der Schleife!
 
@@ -226,7 +232,7 @@ Hake ab:
 - [ ] Er ist am Ende sichtbar (nicht versteckt!)
 - [ ] Ich habe die Blinkgeschwindigkeit einmal geändert
 
-### Schritt 4 – Einen Sternenhimmel durch Duplizieren *(8 min)*
+### Schritt 4 – Einen Sternenhimmel durch Duplizieren *(7 min)*
 
 Ein einzelner Stern macht noch keinen Sternenhimmel. Dein Stern kann sich aber **kopieren lassen** – samt Skript!
 
@@ -245,13 +251,13 @@ Hake ab:
 - [ ] Alle Sterne blinken fünfmal und sind danach sichtbar
 - [ ] Ich habe bei einem Stern die Wartezeit geändert und gesehen, dass nur dieser anders blinkt
 
-### Schritt 5 – Blinken bis zum Stopp: „wiederhole bis" *(5 min)*
+### Schritt 5 – Blinken bis zum Stopp: „wiederhole bis" *(7 min)*
 
 Jetzt kommt „wiederhole bis" zum Einsatz: Die Sterne sollen blinken, sobald du die **Taste S** drückst, und erst aufhören, wenn du die **Leertaste** drückst. Baue für **einen** Stern ein **neues Skript** (das Flaggen-Skript bleibt unverändert):
 
-```
-[Wenn Taste S gedrückt]                  ← Ereignisse (gelb)
-[wiederhole bis <Taste Leertaste gedrückt?>]  ← Fühlen (hellblau) / Steuerung (orange)
+```text
+[Wenn Taste S gedrückt wird]             ← Ereignisse (gelb)
+[wiederhole bis <Taste Leertaste gedrückt?>]  ← Steuerung (orange) / Fühlen (hellblau)
     [verstecke dich]                     ← Aussehen (lila)
     [warte 0.3 Sekunden]                 ← Steuerung (orange)
     [zeige dich]                         ← Aussehen (lila)
@@ -262,6 +268,8 @@ Jetzt kommt „wiederhole bis" zum Einsatz: Die Sterne sollen blinken, sobald du
 Die anderen Sterne haben dieses Skript noch nicht. **Ziehe das Skript** mit der Maus auf die Bilder der anderen Sterne im Figurenbereich – dort wird es hineinkopiert.
 
 > 💡 **Tipp:** Drücke S erst, wenn die Flaggen-Skripte durchgelaufen sind. Sonst arbeiten zwei Skripte gleichzeitig am selben Stern.
+
+**Teste:** Klicke die grüne Flagge und warte, bis alle Sterne fertig geblinkt haben. Drücke dann S und nach ein paar Sekunden die Leertaste. Was machen die Sterne?
 
 Hake ab:
 
@@ -286,14 +294,11 @@ Beantworte diese Fragen und hake ab, wenn du eine Antwort hast:
 
 - [ ] Welche drei Arten von Schleifen gibt es, und woran erkennst du, welche du brauchst?
 - [ ] Was ist eine Endlosschleife? Wann ist sie sinnvoll, wann ein Fehler?
-- [ ] Was würde passieren, wenn du `nächstes Kostüm` **vor** die Schleife statt hinein schreibst?
+- [ ] Was würde passieren, wenn du `wechsle zum nächsten Kostüm` **vor** die Schleife statt hinein schreibst?
 
 > 🟠 **Mentor-Moment (ca. 5 min)**
-> Zeige dem Mentor deine fertige Animation. Der Mentor schaut sie sich an und fragt:
 >
-> - „Wo in deinem Projekt hast du Schleifen benutzt, und warum hast du dort genau diese Art gewählt?"
-> - „Wie viele Blöcke hättest du für das Blinken gebraucht, wenn es keine Schleife gäbe?"
-> - „Wie könntest du das Quiz aus Einheit 4 mit einer Schleife kürzer machen?"
+> Zeige dem Mentor deine fertige Animation und zeige, wo du welche Art von Schleife benutzt hast.
 
 ---
 

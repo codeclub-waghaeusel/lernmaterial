@@ -6,7 +6,7 @@
 
 ## Lernziel
 
-Du verstehst, was eine Variable ist, und kannst sie in Scratch anlegen und verwenden. Am Ende hast du dein Klickspiel aus Einheit 2 mit einem echten Punktezähler ausgebaut – und als Bonus mit einem Zeitlimit versehen.
+Du verstehst, was eine Variable ist, und kannst sie in Scratch anlegen und verwenden. Am Ende hast du dein Klickspiel aus Einheit 2 mit einem echten Punktezähler ausgebaut – mit Spielernamen und einem Zeitlimit.
 
 ---
 
@@ -40,16 +40,16 @@ Stell dir vor, du spielst mit Freunden ein Kartenspiel. Jemand schreibt die Punk
 
 Schreib in deinen eigenen Worten auf, was eine Variable ist:
 
-_______________________________________________
+`_____________________________________________________________`
 
-### Schritt 2 – Vier wichtige Blöcke *(5 min)*
+### Schritt 2 – Zwei wichtige Blöcke *(10 min)*
 
-In Scratch gibt es 2 verschiedene Blöcke um mit Variablen zu arbeiten.
+In Scratch gibt es zwei wichtige Blöcke, um mit Variablen zu arbeiten:
 
-- Block 1: `setze ... auf ...` -> setzte eine Variable auf einen bestimmten Wert
-- Block 2: `ändere ... um ...` -> verändert die Variable um einen bestimmten Wert
+- Block 1: `setze ... auf ...` → setzt eine Variable auf einen bestimmten Wert
+- Block 2: `ändere ... um ...` → verändert die Variable um einen bestimmten Wert
 
-Ordne jedem Block durch verbinden zu was dieser Block bewirkt:
+Verbinde jedes Beispiel mit einer Linie mit dem, was es bewirkt:
 
 | Block | ..... | Was er macht |
 | ------- | ------ | ------------- |
@@ -64,31 +64,29 @@ Ordne jedem Block durch verbinden zu was dieser Block bewirkt:
 >
 > Zeige dem Mentor deine ausgefüllte Tabelle und Verbindungsaufgabe.
 
-### Schritt 3 – Variable in Scratch anlegen *(5 min)*
-
-Öffne ein neues Scratch-Projekt und lege eine Variable an:
-
-- [ ] Klicke in der Blockpalette auf **„Variablen"** (orange-rot)
-- [ ] Klicke auf **„Erstelle eine Variable"**
-- [ ] Gib der Variable den Namen `Punkte` und bestätige mit OK
-- [ ] Oben auf der Bühne erscheint jetzt eine kleine Anzeige: **Punkte: 0**
-
 ---
 
 ## Phase 2 · Variable testen *(20 min)*
 
-### Schritt 1 – Klickspiel öffnen *(2 min)*
+### Schritt 1 – Neues Projekt öffnen *(2 min)*
 
-Schließe das Testprojekt und öffne dein gespeichertes **Klickspiel aus Einheit 2** auf scratch.mit.edu.
+Öffne ein **neues Scratch-Projekt**. Behalte die Katze. Dieses Projekt ist nur zum Ausprobieren – dein Klickspiel lädst du danach in Phase 3.
 
-Falls du das Projekt nicht mehr hast: Erstelle ein neues Projekt mit einer Figur, die sich zufällig bewegt (wie in Einheit 2 beschrieben), und lege eine Variable `Punkte` an.
+### Schritt 2 – Variable anlegen *(5 min)*
 
-### Schritt 2 – Variable ausprobieren *(10 min)*
+Lege eine Variable an und hake ab:
 
-Bevor du das Spiel veränderst, baue ein kleines Test-Skript **neben** deine anderen Skripte (nicht dranhängen!):
+- [ ] Klicke in der Blockpalette auf **„Variablen"** (orange-rot)
+- [ ] Klicke auf **„Neue Variable"** (links oben)
+- [ ] Gib der Variable den Namen `Punkte` und bestätige mit OK
+- [ ] Oben links auf der Bühne erscheint jetzt eine kleine Anzeige: **Punkte 0**
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+### Schritt 3 – Variable ausprobieren *(13 min)*
+
+Baue für die Katze dieses Test-Skript:
+
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [setze Punkte auf 0]                     ← Variablen (orange-rot)
 [warte 2 Sekunden]                       ← Steuerung (orange)
 [ändere Punkte um 1]                     ← Variablen (orange-rot)
@@ -96,7 +94,7 @@ Bevor du das Spiel veränderst, baue ein kleines Test-Skript **neben** deine and
 [ändere Punkte um 1]                     ← Variablen (orange-rot)
 ```
 
-**Schau auf die Bühne!** Die Anzeige oben links zählt hoch.
+**Teste:** Klicke die grüne Flagge und schau auf die Anzeige **Punkte** oben links auf der Bühne.
 
 Hake ab, was du ausprobiert hast:
 
@@ -104,12 +102,6 @@ Hake ab, was du ausprobiert hast:
 - [ ] Nach 2 Sekunden springt sie auf 1, dann auf 2
 - [ ] Ich habe „ändere Punkte um 5" versucht – was passiert?
 - [ ] Ich habe „ändere Punkte um −1" versucht – was passiert?
-
-### Schritt 3 – Test-Skript löschen *(8 min)*
-
-Das Test-Skript hat seinen Zweck erfüllt. Lösche es wieder:
-
-**Rechtsklick auf das Test-Skript → „Block löschen"**
 
 > 💡 **Tipp:** Ob eine Variable auf der Bühne sichtbar ist, steuerst du mit dem Häkchen neben dem Variablennamen in der Blockpalette unter „Variablen". Häkchen weg = Variable versteckt, Häkchen da = Variable sichtbar.
 
@@ -119,40 +111,47 @@ Das Test-Skript hat seinen Zweck erfüllt. Lösche es wieder:
 
 ### Schritt 1 – Spielernamen abfragen & Punktezähler einbauen *(15 min)*
 
-Zuerst bauen wir eine **Text-Variable** ein: Das Spiel soll den Namen des Spielers abfragen und ihn begrüßen. Erstelle dazu eine neue Variable mit dem Namen `Name`:
+Lade dein gespeichertes **Klickspiel aus Einheit 2**: Datei → **Von deinem Computer hochladen**. Falls du das Projekt nicht mehr hast, baue die Figur, die zufällig springt, wie in Einheit 2 noch einmal.
 
-- Klicke auf „Erstelle eine Variable" → Name: `Name`
+Lege im Klickspiel zwei Variablen an (die Variable aus dem Testprojekt gehört nur zum Testprojekt):
 
-Ergänze das **Flagge-Skript** ganz oben, vor allem anderen:
+- Klicke auf „Neue Variable" → Name: `Punkte`
+- Klicke auf „Neue Variable" → Name: `Name`. Das ist eine **Text-Variable**: Das Spiel soll den Namen des Spielers abfragen und ihn begrüßen.
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
-[frage "Wie heißt du?" und warte]        ← Fühlen (hellblau)   ← NEU
-[setze Name auf Antwort]                 ← Variablen (orange-rot) ← NEU
-[sage Name für 2 Sekunden]               ← Aussehen (lila)     ← NEU
-[setze Punkte auf 0]                     ← Variablen (orange-rot)  ← NEU
-[setze Größe auf 100 %]                  ← Aussehen (lila)
-[gehe zu x: 0 y: 0]                      ← Bewegung (blau)
-[wiederhole fortlaufend]                 ← Steuerung (orange)
-    [warte 1 Sekunden]
-    [gehe zu zufälliger Position]
+Klicke deine **Figur** an. Ergänze im **Flaggen-Skript** ganz oben, direkt unter „Wenn grüne Flagge angeklickt wird":
+
+> 💡 **So liest du die Skripte ab jetzt:** Zeilen mit **+** sind neu, die baust du ein. Zeilen mit **-** nimmst du heraus. **⋮** steht für Blöcke, die bleiben, wie sie sind. Alle anderen Zeilen hast du schon.
+
+```diff
+  [Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
++ [frage "Wie heißt du?" und warte]        ← Fühlen (hellblau)
++ [setze Name auf (Antwort)]               ← Variablen (orange-rot) / Fühlen (hellblau)
++ [sage (Name) für 2 Sekunden]             ← Aussehen (lila) / Variablen (orange-rot)
++ [setze Punkte auf 0]                     ← Variablen (orange-rot)
+  [setze Größe auf 100 %]                  ← Aussehen (lila)
+  [gehe zu x: 0 y: 0]                      ← Bewegung (blau)
+  [wiederhole fortlaufend]                 ← Steuerung (orange)
+      [warte 1 Sekunden]                   ← Steuerung (orange)
+      [gehe zu zufälliger Position]        ← Bewegung (blau)
 ```
 
 **Wo finde ich „frage ... und warte"?** → Kategorie **Fühlen** (hellblau), ganz oben in der Liste.
 
-> 💡 **Was passiert hier?** Der Block `frage ... und warte` öffnet ein Eingabefeld auf der Bühne. Was der Spieler tippt, landet automatisch in einer speziellen Variable namens **„Antwort"**. Mit `setze Name auf Antwort` kopierst du diesen Text in deine eigene Variable `Name` – die du dann überall im Spiel verwenden kannst. Das ist ein Beispiel für eine **Zeichenfolge** (Text) in einer Variable, genauso wie du es in Schritt 2 gelernt hast!
+> 💡 **Tipp:** Die Klammern `( )` zeigen dir einen **runden Block**, den du in ein Feld ziehst. Den runden Block **Antwort** findest du unter **Fühlen**, den runden Block **Name** unter **Variablen**, sobald du die Variable angelegt hast. **Tippe die Wörter nicht ein!** Sonst sagt die Figur nur das Wort „Name" statt deines Namens.
 
-Jetzt noch den **Punktezähler** ins Klick-Skript einbauen – füge ganz unten einen neuen Block hinzu:
+> 💡 **Was passiert hier?** Der Block `frage ... und warte` öffnet ein Eingabefeld auf der Bühne. Was der Spieler tippt, landet automatisch in einer speziellen Variable namens **„Antwort"**. Mit `setze Name auf (Antwort)` kopierst du diesen Text in deine eigene Variable `Name` – die du dann überall im Spiel verwenden kannst. Das ist ein Beispiel für eine **Zeichenfolge** (Text) in einer Variable, genauso wie du es in Phase 1 gelernt hast!
 
+Jetzt noch den **Punktezähler**: Ergänze im **Klick-Skript** ganz unten einen Block:
+
+```diff
+  [Wenn diese Figur angeklickt wird]        ← Ereignisse (gelb)
+  [spiele Klang Meow]                       ← Klang (pink)
+  [sage "Treffer! +1 Punkt" für 1 Sekunden] ← Aussehen (lila)
+  [ändere Größe um -10]                     ← Aussehen (lila)
++ [ändere Punkte um 1]                      ← Variablen (orange-rot)
 ```
-[Wenn diese Figur angeklickt]            ← Ereignisse (gelb)
-[spiele Klang "Miau" ab]                 ← Klang (pink)
-[sage "Treffer!" für 1 Sekunden]         ← Aussehen (lila)
-[ändere Größe um -10]                    ← Aussehen (lila)
-[ändere Punkte um 1]                     ← Variablen (orange-rot)  ← NEU
-```
 
-**Teste das Spiel:** Klicke die Flagge – wirst du nach deinem Namen gefragt? Sagt die Figur deinen Namen? Steigt der Punktezähler bei jedem Treffer?
+**Teste:** Klicke die grüne Flagge und gib deinen Namen ein. Triff dann die Figur ein paarmal und schau auf die Anzeige **Punkte** auf der Bühne.
 
 Hake ab:
 
@@ -175,26 +174,30 @@ Spiele dein Spiel ein paar Mal durch:
 
 ### Schritt 3 – Zeitlimit einbauen *(15 min)*
 
-> 🌟 **Bonusaufgabe:** Dein Spiel hat einen Punktezähler, aber kein Zeitlimit. Das wollen wir ändern!
+Dein Spiel hat einen Punktezähler, aber kein Zeitlimit. Das ändern wir jetzt!
 
-Erstelle eine zweite Variable mit dem Namen `Zeit`:
+Erstelle eine dritte Variable mit dem Namen `Zeit`:
 
-- Klicke auf „Erstelle eine Variable" → Name: `Zeit`
+- Klicke auf „Neue Variable" → Name: `Zeit`
 
 Baue ein **neues, viertes Skript** neben deine anderen Skripte:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [setze Zeit auf 15]                      ← Variablen (orange-rot)
 [wiederhole fortlaufend]                 ← Steuerung (orange)
     [warte 1 Sekunden]                   ← Steuerung (orange)
     [ändere Zeit um -1]                  ← Variablen (orange-rot)
-    [falls Zeit < 1]                     ← Steuerung (orange)
+    [falls <(Zeit) < 1> dann]            ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
         [sage "Zeit abgelaufen!" für 2 Sek.]  ← Aussehen (lila)
         [stoppe alles]                   ← Steuerung (orange)
 ```
 
+> 💡 **Tipp:** Die spitzen Klammern `< >` zeigen dir einen **sechseckigen Block**: Ziehe den grünen Block „ ... < ... " aus **Operatoren** in das Feld von „falls". In sein linkes Feld ziehst du den runden Block **Zeit** aus **Variablen** (nicht eintippen!), in das rechte Feld tippst du `1`.
+
 > 💡 **Erklärung:** Die Variable `Zeit` startet bei 15 und zählt jede Sekunde um 1 runter. Wenn sie unter 1 fällt – also 0 erreicht – ist die Zeit abgelaufen und das Spiel stoppt. Du hast **15 Sekunden**, so viele Treffer wie möglich zu landen!
+
+**Teste:** Klicke die grüne Flagge und schau auf die Anzeige **Zeit** auf der Bühne. Was passiert, wenn sie bei 0 ankommt?
 
 Hake ab:
 
@@ -202,6 +205,8 @@ Hake ab:
 - [ ] Das Spiel stoppt, wenn die Zeit 0 erreicht
 - [ ] Punkte und Zeit werden beide auf der Bühne angezeigt
 - [ ] Ich habe die Startzeit auf `10` geändert – wird das Spiel schwieriger?
+
+> 🌟 **Bonusaufgabe:** Mach das Spiel mit jedem Treffer schneller! Lege eine Variable `Wartezeit` an. Setze sie im Flaggen-Skript vor der Schleife auf `1` und benutze in der Schleife `warte (Wartezeit) Sekunden`. Baue ins Klick-Skript `ändere Wartezeit um -0.05` ein. Wie viele Punkte schaffst du jetzt?
 
 ---
 
@@ -243,6 +248,6 @@ Beantworte diese Fragen und hake ab, wenn du eine Antwort hast:
 
 ## Ausblick auf Einheit 4
 
-Im nächsten Schritt lernst du **Bedingungen** kennen – dann kann dein Spiel selbst Entscheidungen treffen: „Wenn die Punkte über 10 sind, mach die Figur schneller!" Speichere dein Klickspiel sorgfältig, denn wir bauen es weiter aus!
+In der nächsten Einheit lernst du **Bedingungen** kennen – dann kann dein Programm selbst Entscheidungen treffen: Ist die Antwort richtig oder falsch? Damit baust du ein Quiz-Spiel, das Punkte vergibt.
 
 ---

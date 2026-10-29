@@ -48,6 +48,8 @@ In deinem Alltag triffst du ständig Entscheidungen mit Bedingungen. Verbinde mi
 | Wenn es regnet | ...dann darfst du rein |
 | Wenn du das richtige Passwort eingibst | ...dann nimm einen Regenschirm mit |
 
+> Tipp: Die rechte Spalte ist bewusst durcheinander. Lies jede Zeile genau!
+
 ### Schritt 3 – Was ist mit „sonst"? *(5 min)*
 
 Was passiert, wenn die Bedingung *falsch* ist? Dafür gibt es das Wort **„sonst"**. Ergänze die Sätze:
@@ -59,11 +61,8 @@ Wenn ich die Frage richtig beantworte, bekomme ich einen Punkt. **Sonst** ______
 > 💡 **Wenn-dann-sonst** bedeutet: Du hast immer zwei Möglichkeiten – eine für den Fall, dass die Bedingung *wahr* ist, und eine für den Fall, dass sie *falsch* ist.
 
 > 🟠 **Mentor-Moment (ca. 5 min)**
-> Zeige dem Mentor deine Antworten aus Schritt 1 und 2. Der Mentor fragt:
 >
-> - „Schau auf Schritt 1: Was ändert sich, wenn der Spieler statt 7 Punkten plötzlich 3 Punkte hat?"
-> - „Erfinde eine eigene Wenn-dann-sonst-Regel für dein Lieblingsspiel!"
-> - „Was würde passieren, wenn ein Computer keine wahr/falsch-Entscheidungen treffen könnte?"
+> Zeige dem Mentor deine Antworten aus den Schritten 1 bis 3.
 
 ---
 
@@ -71,16 +70,16 @@ Wenn ich die Frage richtig beantworte, bekomme ich einen Punkt. **Sonst** ______
 
 ### Schritt 1 – Neues Projekt öffnen *(2 min)*
 
-Öffne ein **neues Scratch-Projekt** auf scratch.mit.edu. Wähle eine Figur, die die Quiz-Fragen stellen soll – zum Beispiel eine Person, ein Tier oder eine sprechende Glühbirne.
+Öffne ein **neues Scratch-Projekt**. Behalte die Katze. Dieses Projekt ist nur zum Ausprobieren – dein Quiz baust du danach in einem weiteren neuen Projekt.
 
 ### Schritt 2 – Erste Bedingung: nur „wenn-dann" *(10 min)*
 
 Baue dieses Skript und teste es:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [frage "Wie viel ist 5 + 3?" und warte]  ← Fühlen (hellblau)
-[falls <Antwort = "8"> dann]             ← Steuerung (orange)
+[falls <(Antwort) = "8"> dann]           ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
     [sage "Richtig!" für 2 Sekunden]     ← Aussehen (lila)
 ```
 
@@ -89,47 +88,59 @@ Baue dieses Skript und teste es:
 - „falls ... dann" → Kategorie **Steuerung** (orange)
 - Den Vergleich `Antwort = "8"` baust du so: Nimm den `=`-Block aus **Operatoren** (grün), ziehe das Oval „Antwort" aus **Fühlen** (hellblau) in die linke Lücke und tippe `8` in die rechte Lücke.
 
+> 💡 **Tipp:** `< >` steht für einen sechseckigen Block (wahr oder falsch), `( )` für einen runden Block. Runde Blöcke wie **Antwort** oder **Punkte** ziehst du immer in das Feld – **nicht eintippen!**
+
 Hake ab, was du beobachtet hast:
 
 - [ ] Wenn ich „8" eingebe → Figur sagt „Richtig!"
 - [ ] Wenn ich „5" eingebe → Figur sagt gar nichts
-- [ ] Wenn ich „8 " (mit Leerzeichen dahinter) eingebe – was passiert?
+- [ ] Wenn ich „acht" eingebe – was passiert?
 
 ### Schritt 3 – Besser: „wenn-dann-sonst" *(8 min)*
 
-Der Block „falls ... dann" alleine reagiert nicht, wenn die Bedingung falsch ist. Baue jetzt die vollständige Version – **verändere** dein Skript entsprechend:
+Der Block „falls ... dann" alleine reagiert nicht, wenn die Bedingung falsch ist. Tausche ihn im Skript der Katze gegen den Block **„falls ... dann ... sonst"** aus. Die Bedingung und den „sage"-Block ziehst du vom alten in den neuen Block um. In den „sonst"-Teil kommt ein zweiter „sage"-Block:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
-[frage "Wie viel ist 5 + 3?" und warte]  ← Fühlen (hellblau)
-[falls <Antwort = "8"> dann]             ← Steuerung (orange)
-    [sage "Richtig!" für 2 Sekunden]     ← Aussehen (lila)
-[sonst]
-    [sage "Leider falsch – es ist 8." für 2 Sek.]  ← Aussehen (lila)
+> 💡 **So liest du die Skripte ab jetzt:** Zeilen mit **+** sind neu, die baust du ein. Zeilen mit **-** nimmst du heraus. **⋮** steht für Blöcke, die bleiben, wie sie sind. Alle anderen Zeilen hast du schon.
+
+```diff
+  [Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
+  [frage "Wie viel ist 5 + 3?" und warte]  ← Fühlen (hellblau)
+- [falls <(Antwort) = "8"> dann]           ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
++ [falls <(Antwort) = "8"> dann]           ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
+      [sage "Richtig!" für 2 Sekunden]     ← Aussehen (lila)
++ [sonst]                                  ← Steuerung (orange)
++     [sage "Leider falsch – es ist 8." für 2 Sek.]  ← Aussehen (lila)
 ```
 
 > 💡 **Tipp:** Den „falls-dann-sonst"-Block findest du in der Kategorie **Steuerung** (orange). Er sieht dem normalen „falls-dann"-Block ähnlich, hat aber eine zweite Öffnung für den „sonst"-Fall. Scrolle in der Steuerungskategorie nach unten, wenn du ihn nicht gleich siehst.
 
-**Teste:** Gib sowohl eine richtige als auch eine falsche Antwort ein – reagiert die Figur unterschiedlich?
+**Teste:** Klicke die grüne Flagge und antworte `8`. Starte dann noch einmal und antworte `5`. Was sagt die Katze jeweils?
+
+Hake ab:
+
+- [ ] Bei `8` sagt die Katze „Richtig!"
+- [ ] Bei `5` sagt sie „Leider falsch – es ist 8."
 
 ---
 
-## Phase 3 · Das Quiz-Spiel bauen *(45 min)*
+## Phase 3 · Das Quiz-Spiel bauen *(35 min)*
 
-### Schritt 1 – Punktezähler und erste Frage *(10 min)*
+### Schritt 1 – Punktezähler und erste Frage *(8 min)*
 
-Erstelle eine Variable `Punkte` (wie in Einheit 3 gelernt). Baue das vollständige Skript mit der ersten echten Quiz-Frage:
+Öffne ein **neues Scratch-Projekt**. Wähle eine Figur, die die Quiz-Fragen stellen soll – zum Beispiel eine Person, ein Tier oder eine sprechende Glühbirne. Lege mit **Neue Variable** die Variable `Punkte` an (wie in Einheit 3). Baue dann für deine Figur das Skript mit der ersten echten Quiz-Frage:
 
-```
-[Wenn grüne Flagge angeklickt]            ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]       ← Ereignisse (gelb)
 [setze Punkte auf 0]                      ← Variablen (orange-rot)
 [frage "Was ist die Hauptstadt von Deutschland?" und warte]  ← Fühlen (hellblau)
-[falls <Antwort = "Berlin"> dann]         ← Steuerung (orange)
+[falls <(Antwort) = "Berlin"> dann]       ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
     [sage "Richtig! +1 Punkt" für 2 Sek.] ← Aussehen (lila)
     [ändere Punkte um 1]                  ← Variablen (orange-rot)
 [sonst]
     [sage "Leider falsch – es ist Berlin." für 2 Sek.]  ← Aussehen (lila)
 ```
+
+**Teste:** Klicke die grüne Flagge und antworte `Berlin`. Starte dann noch einmal und antworte falsch. Schau dabei auf die Anzeige **Punkte** auf der Bühne.
 
 Hake ab:
 
@@ -137,27 +148,34 @@ Hake ab:
 - [ ] Bei richtiger Antwort steigen die Punkte um 1
 - [ ] Bei falscher Antwort erscheint ein Hinweis mit der richtigen Lösung
 
-### Schritt 2 – Zwei weitere Fragen *(15 min)*
+### Schritt 2 – Zwei weitere Fragen *(10 min)*
 
-Füge **direkt darunter** im selben Skript zwei weitere Fragen hinzu. Du kannst eigene Fragen erfinden!
+Hänge im selben Skript **unter** den Block „falls ... dann ... sonst" (nicht hinein!) zwei weitere Fragen an. Du kannst auch eigene Fragen erfinden!
 
-```
-[frage "Wie viel ist 7 × 8?" und warte]  ← Fühlen (hellblau)
-[falls <Antwort = "56"> dann]
-    [sage "Richtig! +1 Punkt" für 2 Sek.]
-    [ändere Punkte um 1]
-[sonst]
-    [sage "Leider falsch – es ist 56." für 2 Sek.]
-
-[frage "Wie heißt der Planet zwischen Venus und Mars?" und warte]
-[falls <Antwort = "Erde"> dann]
-    [sage "Richtig! +1 Punkt" für 2 Sek.]
-    [ändere Punkte um 1]
-[sonst]
-    [sage "Leider falsch – es ist die Erde." für 2 Sek.]
+```diff
+  [Wenn grüne Flagge angeklickt wird]         ← Ereignisse (gelb)
+  ⋮
+  [falls <(Antwort) = "Berlin"> dann]         ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
+  ⋮
+  [sonst]                                     ← Steuerung (orange)
+      [sage "Leider falsch – es ist Berlin." für 2 Sek.] ← Aussehen (lila)
++ [frage "Wie viel ist 7 × 8?" und warte]     ← Fühlen (hellblau)
++ [falls <(Antwort) = "56"> dann]             ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
++     [sage "Richtig! +1 Punkt" für 2 Sek.]   ← Aussehen (lila)
++     [ändere Punkte um 1]                    ← Variablen (orange-rot)
++ [sonst]                                     ← Steuerung (orange)
++     [sage "Leider falsch – es ist 56." für 2 Sek.] ← Aussehen (lila)
++ [frage "Wie heißt der Planet zwischen Venus und Mars?" und warte] ← Fühlen (hellblau)
++ [falls <(Antwort) = "Erde"> dann]           ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
++     [sage "Richtig! +1 Punkt" für 2 Sek.]   ← Aussehen (lila)
++     [ändere Punkte um 1]                    ← Variablen (orange-rot)
++ [sonst]                                     ← Steuerung (orange)
++     [sage "Leider falsch – es ist die Erde." für 2 Sek.] ← Aussehen (lila)
 ```
 
 > 💡 **Eigene Fragen einbauen:** Du kannst die Themen frei wählen – Sport, Tiere, Filme, Geografie... Schreib dir die Antwort genau auf, damit du weißt, wie du sie in Scratch eintippen musst.
+
+**Teste:** Klicke die grüne Flagge und beantworte alle drei Fragen. Schau nach jeder Frage auf die Anzeige **Punkte**.
 
 Hake ab:
 
@@ -165,22 +183,33 @@ Hake ab:
 - [ ] Richtige Antworten geben je 1 Punkt
 - [ ] Falsche Antworten zeigen den richtigen Hinweis
 
-### Schritt 3 – Abschlussnachricht einbauen *(10 min)*
+### Schritt 3 – Abschlussnachricht einbauen *(7 min)*
 
-Füge ganz am Ende des Skripts, nach allen drei Fragen, die Auswertung hinzu:
+Hänge ganz am Ende des Skripts, unter die dritte Frage, die Auswertung an:
 
+```diff
+  [Wenn grüne Flagge angeklickt wird]         ← Ereignisse (gelb)
+  ⋮
+  [falls <(Antwort) = "Erde"> dann]           ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
+  ⋮
+  [sonst]                                     ← Steuerung (orange)
+      [sage "Leider falsch – es ist die Erde." für 2 Sek.] ← Aussehen (lila)
++ [falls <(Punkte) = 3> dann]                 ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
++     [sage "Perfekt! 3 von 3 – du bist ein Quiz-Champion!" für 3 Sek.] ← Aussehen (lila)
++ [sonst]                                     ← Steuerung (orange)
++     [sage "Nicht alle richtig – versuch es nochmal!" für 3 Sek.] ← Aussehen (lila)
 ```
-[falls <Punkte = 3> dann]                ← Steuerung (orange)
-    [sage "Perfekt! 3 von 3 – du bist ein Quiz-Champion!" für 3 Sek.]  ← Aussehen (lila)
-[sonst]
-    [sage "Nicht alle richtig – versuch es nochmal!" für 3 Sek.]  ← Aussehen (lila)
-```
 
-**Teste dein Quiz:** Klicke die Flagge und beantworte alle drei Fragen. Erscheint am Ende die richtige Nachricht?
+**Teste:** Klicke die grüne Flagge und beantworte alle drei Fragen richtig. Starte dann noch einmal und mach absichtlich einen Fehler. Was sagt die Figur am Ende jeweils?
+
+Hake ab:
+
+- [ ] Bei 3 Punkten erscheint „Perfekt!"
+- [ ] Bei weniger Punkten erscheint „Nicht alle richtig"
 
 ### Schritt 4 – Verschachtelte Bedingungen: mehrere Stufen *(10 min)*
 
-Stell dir vor, Deine Eltern wollen entscheiden, ob du nach der Schule draußen spielen darfst. Das klappt nicht mit einer einzigen Frage – du brauchst mehrere:
+Stell dir vor, deine Eltern wollen entscheiden, ob du nach der Schule draußen spielen darfst. Das klappt nicht mit einer einzigen Frage – du brauchst mehrere:
 
 **Überlege, was in jeder Situation passiert – fülle die leeren Felder aus:**
 
@@ -194,22 +223,34 @@ Das nennt man eine **verschachtelte Bedingung**.
 
 > 💡 **Merke:** **Eine** verschachtelte Bedingung ist eine Bedingung, die innerhalb einer anderen Bedingung steckt – wie eine kleine Box in einer großen Box. Der Computer prüft immer zuerst die äußere Bedingung: Ist sie **wahr**, landet er im „dann"-Bereich. Ist sie **falsch**, landet er im „sonst"-Bereich. In *beiden* Bereichen kann eine weitere Bedingung stecken! So kannst du mehrere Fragen nacheinander stellen und für jede Kombination eine eigene Antwort festlegen.
 
-**Wende das jetzt auf dein Quiz an!** Ersetze die Abschlussnachricht aus Schritt 3 durch diese verschachtelte Version – damit gibt es jetzt vier verschiedene Auswertungen:
+**Wende das jetzt auf dein Quiz an!** Ersetze ganz am Ende des Skripts die Abschlussnachricht aus Schritt 3 durch diese verschachtelte Version – damit gibt es jetzt vier verschiedene Auswertungen:
 
-```
-[falls <Punkte = 3> dann]
-    [sage "Perfekt! Alle 3 richtig – du bist Quiz-Champion!" für 3 Sek.]
-[sonst]
-    [falls <Punkte > 1> dann]
-        [sage "Sehr gut! 2 von 3 richtig." für 3 Sek.]
-    [sonst]
-        [falls <Punkte > 0> dann]
-            [sage "Nicht schlecht! 1 von 3 richtig." für 3 Sek.]
-        [sonst]
-            [sage "Kein Punkt – probier es nochmal!" für 3 Sek.]
+```diff
+  [Wenn grüne Flagge angeklickt wird]         ← Ereignisse (gelb)
+  ⋮
+  [falls <(Antwort) = "Erde"> dann]           ← Steuerung (orange) / Operatoren (grün) / Fühlen (hellblau)
+  ⋮
+  [sonst]                                     ← Steuerung (orange)
+      [sage "Leider falsch – es ist die Erde." für 2 Sek.] ← Aussehen (lila)
+- [falls <(Punkte) = 3> dann]                 ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
+-     [sage "Perfekt! 3 von 3 – du bist ein Quiz-Champion!" für 3 Sek.] ← Aussehen (lila)
+- [sonst]                                     ← Steuerung (orange)
+-     [sage "Nicht alle richtig – versuch es nochmal!" für 3 Sek.] ← Aussehen (lila)
++ [falls <(Punkte) = 3> dann]                 ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
++     [sage "Perfekt! Alle 3 richtig – du bist Quiz-Champion!" für 3 Sek.] ← Aussehen (lila)
++ [sonst]                                     ← Steuerung (orange)
++     [falls <(Punkte) > 1> dann]             ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
++         [sage "Sehr gut! 2 von 3 richtig." für 3 Sek.] ← Aussehen (lila)
++     [sonst]                                 ← Steuerung (orange)
++         [falls <(Punkte) > 0> dann]         ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
++             [sage "Nicht schlecht! 1 von 3 richtig." für 3 Sek.] ← Aussehen (lila)
++         [sonst]                             ← Steuerung (orange)
++             [sage "Kein Punkt – probier es nochmal!" für 3 Sek.] ← Aussehen (lila)
 ```
 
 > 💡 **Tipp:** Den inneren „falls-dann-sonst"-Block ziehst du direkt in den „sonst"-Bereich des äußeren Blocks. Scratch zeigt das durch Einrückung – so siehst du auf einen Blick, welcher Block zu welcher Ebene gehört.
+
+**Teste:** Spiele das Quiz viermal: mit 3, 2, 1 und 0 richtigen Antworten. Was sagt die Figur am Ende jeweils?
 
 Hake ab:
 
@@ -235,16 +276,13 @@ Name: `Einheit 4 – mein Quiz-Spiel`
 
 Beantworte diese Fragen und hake ab, wenn du eine Antwort hast:
 
-- [ ] Was bedeutet „wahr" und „falsch" bei einer Bedingung? (Erkläre es mit einem Beispiel!)
 - [ ] Was ist der Unterschied zwischen „falls-dann" und „falls-dann-sonst"?
 - [ ] Was würde passieren, wenn du `setze Punkte auf 0` nach den Fragen statt davor schreibst?
+- [ ] Was passiert, wenn jemand bei der Frage nach dem Planeten „die Erde" statt „Erde" eingibt? Teste es!
 
 > 🟠 **Mentor-Moment (ca. 5 min)**
-> Zeige dem Mentor dein fertiges Quiz-Spiel. Der Mentor spielt es einmal durch und fragt dann:
 >
-> - „Erkläre mir, was eine Bedingung ist – mit einem Beispiel aus dem Alltag!"
-> - „Was passiert, wenn jemand ‚berlin' (klein geschrieben) eingibt statt ‚Berlin'? Teste es!"
-> - „Wie könntest du das Quiz fairer machen – zum Beispiel für Antworten mit Groß/Kleinschreibung?"
+> Lass den Mentor dein fertiges Quiz-Spiel einmal durchspielen und zeige, wo dein Skript eine Entscheidung trifft.
 
 ---
 
@@ -263,6 +301,6 @@ Beantworte diese Fragen und hake ab, wenn du eine Antwort hast:
 
 ## Ausblick auf Einheit 5
 
-Im nächsten Schritt lernst du **Schleifen** kennen – dann musst du nicht mehr jede Quiz-Frage einzeln aufschreiben! Eine Schleife kann Code immer wieder ausführen, was dein Programm kürzer und mächtiger macht. Speichere dein Quiz sorgfältig!
+In der nächsten Einheit lernst du **Schleifen** kennen. Statt dieselben Blöcke immer wieder untereinander zu bauen, sagst du Scratch einfach, wie oft sie wiederholt werden sollen. Damit baust du eine Animation mit einer laufenden Figur und blinkenden Sternen.
 
 ---

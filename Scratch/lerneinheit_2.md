@@ -15,7 +15,6 @@ Du verstehst, dass die Reihenfolge von Blöcken in Scratch wichtig ist, und wei�
 - Computer mit Internetzugang und Scratch-Konto (scratch.mit.edu) – oder Scratch Desktop offline
 - Diese Lernkarte (ausgedruckt oder am zweiten Bildschirm geöffnet)
 - Stift für die Aufgaben in Phase 1
-- Gespeichertes Projekt aus Einheit 1 (optional als Ausgangspunkt)
 
 ---
 
@@ -31,32 +30,30 @@ Du schreibst ihr jeden Schritt auf einen eigenen Zettel.
 | Reihenfolge | Schritt |
 | ----------- | --------- |
 | ☐ | Löffel nehmen und essen |
+| ☐ | Schüssel in die Spülmaschine stellen |
+| ☐ | Milch über die Cornflakes gießen |
 | ☐ | Schüssel auf den Tisch stellen |
 | ☐ | Cornflakes in die Schüssel schütten |
-| ☐ | Milch über die Cornflakes gießen |
-| ☐ | Kühlschrank öffnen und Milch rausholen |
 
-> 💡 **Wichtig:** Wenn die Reihenfolge falsch ist, geht etwas schief! Was passiert zum Beispiel, wenn du zuerst die Milch eingießt, bevor du die Schüssel holst?
->
-> Schreib es hier auf: _______________________________________________
+Wenn die Reihenfolge falsch ist, geht etwas schief! Was passiert zum Beispiel, wenn du die Milch eingießt, bevor die Schüssel auf dem Tisch steht?
 
-### Schritt 2 – Reihenfolge in Scratch *(5 min)*
+_______________________________________________
 
-In Scratch ist es genauso! Die Blöcke werden **immer von oben nach unten** ausgeführt – Schritt für Schritt, in der Reihenfolge, in der sie gestapelt sind.
+### Schritt 2 – Wer postet was? *(5 min)*
 
-Schau dir diese zwei Skripte an. Was ist der Unterschied?
+Lea und Tim nehmen beide ein Video auf und stellen es online. Jeder arbeitet seine Checkliste von oben nach unten ab:
 
-```text
-Skript A:                          Skript B:
-─────────────────────────          ─────────────────────────
-[Wenn Flagge angeklickt]           [Wenn Flagge angeklickt]
-[sage "Ich starte!" 2 Sek.]        [gehe 100 Schritte]
-[gehe 100 Schritte]                [sage "Ich starte!" 2 Sek.]
-```
+| Lea | Tim |
+| --- | --- |
+| 1. Video aufnehmen | 1. Video aufnehmen |
+| 2. Lustigen Filter drüberlegen | 2. Video hochladen |
+| 3. Video hochladen | 3. Lustigen Filter drüberlegen |
 
-Was macht die Figur zuerst in **Skript A**? _______________________________________________
+Wessen Video sehen die anderen **mit** Filter? _______________________________________________
 
-Was macht die Figur zuerst in **Skript B**? _______________________________________________
+Warum? _______________________________________________
+
+> 💡 **Merke:** Scratch arbeitet wie Lea und Tim: Die Blöcke werden **immer von oben nach unten** ausgeführt – Schritt für Schritt, in der Reihenfolge, in der sie gestapelt sind. Gleiche Blöcke in anderer Reihenfolge ergeben ein anderes Ergebnis.
 
 ### Schritt 3 – Auslöser: Wann passiert was? *(5 min)*
 
@@ -66,9 +63,9 @@ Verbinde mit einer Linie, welcher Auslöser zu welchem Beispiel aus dem Alltag p
 
 | Auslöser in Scratch | Beispiel aus dem Alltag |
 | --------------------- | ------------------------- |
-| Wenn **grüne Flagge** angeklickt | Du drückst „A" auf dem Controller – dein Charakter springt |
-| Wenn **diese Figur** angeklickt | Du drückst „Play" bei YouTube – das Video startet |
-| Wenn **Taste gedrückt** | Du tippst auf eine App auf dem Handy – sie öffnet sich |
+| Wenn **grüne Flagge** angeklickt wird | Du drückst „A" auf dem Controller – dein Charakter springt |
+| Wenn **diese Figur** angeklickt wird | Du drückst „Play" bei YouTube – das Video startet |
+| Wenn **Taste** gedrückt wird | Du tippst auf eine App auf dem Handy – sie öffnet sich |
 
 > 💡 **Merke:** Ein Auslöser ist wie ein Startschuss. Nichts passiert, bevor der Startschuss fällt!
 
@@ -80,9 +77,9 @@ Verbinde mit einer Linie, welcher Auslöser zu welchem Beispiel aus dem Alltag p
 
 ## Phase 2 · Zufällige Bewegung & Klick-Reaktion *(20 min)*
 
-### Schritt 1 – Projekt öffnen *(2 min)*
+### Schritt 1 – Neues Projekt öffnen *(2 min)*
 
-Öffne dein gespeichertes Projekt aus Einheit 1 oder erstelle ein neues Projekt auf **scratch.mit.edu**.
+Erstelle ein **neues Projekt** auf **scratch.mit.edu**.
 Wähle eine Figur aus, die sich gut anklicken lässt – zum Beispiel ein Tier, ein Ball oder eine bunte Form.
 
 ### Schritt 2 – Figur springt zufällig umher *(10 min)*
@@ -90,7 +87,7 @@ Wähle eine Figur aus, die sich gut anklicken lässt – zum Beispiel ein Tier, 
 Baue dieses Skript. Die Figur springt nach dem Start der grünen Flagge immer wieder an eine zufällige Stelle:
 
 ```text
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [wiederhole fortlaufend]                 ← Steuerung (orange)
     [warte 1 Sekunden]                   ← Steuerung (orange)
     [gehe zu zufälliger Position]        ← Bewegung (blau)
@@ -113,14 +110,21 @@ Hake ab, was du ausprobiert hast:
 Füge ein **zweites, separates Skript** hinzu – leg es einfach neben das erste in den Skriptbereich, **nicht dranhängen!**
 
 ```text
-[Wenn diese Figur angeklickt]            ← Ereignisse (gelb)
-[spiele Klang "Miau" ab]                 ← Klang (pink)
+[Wenn diese Figur angeklickt wird]       ← Ereignisse (gelb)
+[spiele Klang Meow]                      ← Klang (pink)
 [sage "Erwischt!" für 1 Sekunden]        ← Aussehen (lila)
 ```
 
-**Teste dein Programm:** Klicke die grüne Flagge – springt die Figur umher? Kannst du sie anklicken und „Erwischt!" lesen?
+> 💡 **Tipp:** Den Klang „Meow" hat nur die **Katze**. Hast du eine andere Figur gewählt, hat sie eigene Klänge. Klicke dann im Block „spiele Klang ..." auf das kleine Dreieck ▼ und wähle einen Klang deiner Figur aus. Welche Klänge deine Figur hat, siehst du im Reiter **Klänge**.
 
-> 💡 **Cool, oder?** Du hast jetzt zwei Skripte gleichzeitig aktiv. Das erste reagiert auf die Flagge, das zweite auf den Klick auf die Figur. Beide laufen gleichzeitig – das ist der Trick!
+**Teste:** Klicke die grüne Flagge und versuche dann, die springende Figur mit der Maus anzuklicken.
+
+Hake ab:
+
+- [ ] Die Figur springt umher
+- [ ] Wenn ich sie treffe, sagt sie „Erwischt!"
+
+> 💡 **Merke:** Du hast jetzt zwei Skripte gleichzeitig aktiv. Das erste startet mit der Flagge, das zweite mit dem Klick auf die Figur. Beide laufen gleichzeitig – das ist der Trick!
 
 ---
 
@@ -128,16 +132,21 @@ Füge ein **zweites, separates Skript** hinzu – leg es einfach neben das erste
 
 ### Schritt 1 – Figur wird beim Treffer kleiner *(10 min)*
 
-Jetzt bauen wir das echte Spiel! Passe das Klick-Skript so an:
+Jetzt bauen wir das echte Spiel! Klicke deine **Figur** an und ändere das **Klick-Skript**: Im „sage"-Block änderst du den Text, und ganz unten kommt ein neuer Block dazu.
 
-```text
-[Wenn diese Figur angeklickt]            ← Ereignisse (gelb)
-[spiele Klang "Miau" ab]                 ← Klang (pink)
-[sage "Treffer! +1 Punkt" für 1 Sekunden] ← Aussehen (lila)
-[ändere Größe um -10]                    ← Aussehen (lila)
+> 💡 **So liest du die Skripte ab jetzt:** Zeilen mit **+** sind neu, die baust du ein. Zeilen mit **-** nimmst du heraus. **⋮** steht für Blöcke, die bleiben, wie sie sind. Alle anderen Zeilen hast du schon.
+
+```diff
+  [Wenn diese Figur angeklickt wird]        ← Ereignisse (gelb)
+  [spiele Klang Meow]                       ← Klang (pink)
+- [sage "Erwischt!" für 1 Sekunden]         ← Aussehen (lila)
++ [sage "Treffer! +1 Punkt" für 1 Sekunden] ← Aussehen (lila)
++ [ändere Größe um -10]                     ← Aussehen (lila)
 ```
 
 > 💡 **Tipp:** Den Block „ändere Größe um" findest du unter **Aussehen**. Die Zahl `-10` bedeutet: die Figur wird kleiner. Probiere `-20` – was passiert dann?
+
+**Teste:** Klicke die grüne Flagge und klicke die Figur dreimal an. Schau dabei auf ihre Größe.
 
 Hake ab, was du getestet hast:
 
@@ -147,40 +156,59 @@ Hake ab, was du getestet hast:
 
 ### Schritt 2 – Spiel sauber starten *(15 min)*
 
-Wenn du die Flagge mehrmals klickst, wird die Figur immer kleiner. Das wollen wir verhindern! Ergänze das Flagge-Skript oben mit zwei Reset-Blöcken:
+Wenn du die Flagge mehrmals klickst, wird die Figur immer kleiner. Das wollen wir verhindern! Ergänze im **Flaggen-Skript** direkt unter „Wenn grüne Flagge angeklickt wird" zwei Blöcke, die alles auf den Anfang zurücksetzen:
 
-```text
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
-[setze Größe auf 100 %]                  ← Aussehen (lila)    ← NEU
-[gehe zu x: 0 y: 0]                      ← Bewegung (blau)    ← NEU
-[wiederhole fortlaufend]                 ← Steuerung (orange)
-    [warte 1 Sekunden]                   ← Steuerung (orange)
-    [gehe zu zufälliger Position]        ← Bewegung (blau)
+```diff
+  [Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
++ [setze Größe auf 100 %]                  ← Aussehen (lila)
++ [gehe zu x: 0 y: 0]                      ← Bewegung (blau)
+  [wiederhole fortlaufend]                 ← Steuerung (orange)
+      [warte 1 Sekunden]                   ← Steuerung (orange)
+      [gehe zu zufälliger Position]        ← Bewegung (blau)
 ```
 
-> 💡 **Warum steht das vor dem "Wiederhole fortlaufend"-Block?** Die Blöcke *vor* „wiederhole fortlaufend" werden nur **einmal** ausgeführt – gleich beim Start. Die Blöcke *innerhalb* des "Wiederholen fortlaufen"-Blocks laufen immer und immer wieder. Die Reihenfolge der Blöcke macht also auch hier den Unterschied!
+> 💡 **Warum steht das vor dem „wiederhole fortlaufend"-Block?** Die Blöcke *vor* „wiederhole fortlaufend" werden nur **einmal** ausgeführt – gleich beim Start. Die Blöcke *innerhalb* des „wiederhole fortlaufend"-Blocks laufen immer und immer wieder. Die Reihenfolge der Blöcke macht also auch hier den Unterschied!
 
-**Teste das Spiel:** Klicke die Flagge mehrmals hintereinander. Startet die Figur jedes Mal wieder in normaler Größe?
+**Teste:** Klicke die Figur ein paarmal an, damit sie kleiner wird. Klicke dann die grüne Flagge. Hat die Figur wieder ihre normale Größe?
+
+Hake ab:
+
+- [ ] Nach jedem Neustart hat die Figur wieder ihre normale Größe
+- [ ] Sie startet in der Mitte der Bühne
 
 ### Schritt 3 – Spielende einbauen *(10 min)*
 
 Wenn die Figur zu klein wird, soll das Spiel aufhören. Baue ein drittes Skript neben die anderen beiden:
 
-```test
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [wiederhole fortlaufend]                 ← Steuerung (orange)
-    [falls Größe < 30]                   ← Steuerung (orange)
+    [falls <(Größe) < 30> dann]          ← Steuerung (orange) / Operatoren (grün) / Aussehen (lila)
         [sage "Game Over!" für 2 Sek.]   ← Aussehen (lila)
         [stoppe alles]                   ← Steuerung (orange)
 ```
 
-> 💡 **Tipp:** Den Block „falls ... dann" und „stoppe alles" findest du unter **Steuerung** (orange).
+> 💡 **Tipp:** Die Zeile mit „falls" besteht aus **drei Blöcken**, die ineinanderstecken. Die spitzen Klammern `< >` stehen für einen **sechseckigen** Block, die runden Klammern `( )` für einen **runden** Block. So baust du sie:
 >
+> 1. Ziehe „falls ... dann" aus **Steuerung** (orange) in die Schleife.
+> 2. Ziehe den grünen Block „ ... < ... " aus **Operatoren** in das sechseckige Feld von „falls".
+> 3. Ziehe den runden Block **Größe** aus **Aussehen** (lila, ganz unten) in das **linke** Feld des grünen Blocks. **Tippe das Wort „Größe" nicht ein!** Sonst vergleicht Scratch nur das Wort und nicht die echte Größe der Figur.
+> 4. Tippe in das **rechte** Feld die Zahl `30`.
+>
+> „stoppe alles" findest du ebenfalls unter **Steuerung**. Wähle darin im Menü ▼ **alles** aus.
+
+**Teste:** Klicke die grüne Flagge und triff die Figur immer wieder. Was passiert, wenn sie ganz klein geworden ist?
+
+Hake ab:
+
+- [ ] Nach einigen Treffern sagt die Figur „Game Over!"
+- [ ] Danach bewegt sich nichts mehr, das Spiel ist gestoppt
+
 > 🌟 **Bonusaufgabe:** Füge einen Hintergrund hinzu! Klicke auf die **Bühne** (nicht auf die Figur!) im Sprites-Bereich unten rechts. Dann findest du unter „Hintergründe" verschiedene Bilder. Wähle einen passenden Hintergrund für dein Spiel aus.
 
 ---
 
-## Phase 4 · Abschluss & Reflexion *(10 min)*
+## Phase 4 · Abschluss & Reflexion *(15 min)*
 
 ### Schritt 1 – Projekt speichern
 

@@ -61,16 +61,14 @@ Ein Spiel merkt sich, in welcher Lage es gerade steckt. Das nennt man den **Spie
 
 > 💡 **Merke:** Der Spielzustand hängt oft an **Variablen**. Zum Beispiel: Sind die Leben bei 0, ist das Spiel verloren. Das Spiel schaut also ständig auf seine Variablen, um zu wissen, wie es weitergeht.
 
-### Schritt 3 – Der Torwart *(5 min)*
+### Schritt 3 – Die automatische Tür *(5 min)*
 
-Stell dir einen Torwart beim Elfmeterschießen vor. Ergänze die Lücken:
-
-Der Torwart beobachtet den Ball **die ganze Zeit**, nicht nur einmal am Anfang. Bei jedem Moment fragt er sich: „Fliegt der Ball ins Tor?"
+Die Schiebetür im Supermarkt hat einen Sensor. Er fragt sich immer wieder: „Steht jemand vor der Tür?" Ergänze die Lücken:
 
 - Wenn **ja**, dann _______________________________________________
 - **Sonst** _______________________________________________
 
-Was würde passieren, wenn der Torwart nur **ein einziges Mal** am Anfang auf den Ball schaut und danach wegsieht?
+Jetzt hat jemand die Tür falsch eingestellt: Sie prüft nur **ein einziges Mal**, nämlich morgens um 8 Uhr, wenn der Laden aufmacht. Um 8 Uhr steht noch niemand davor. Du kommst um 10 Uhr zum Einkaufen. Was passiert?
 
 ____________________________________________________________________________________________________________________________________
 
@@ -90,9 +88,9 @@ ________________________________________________________________________________
 
 Baue zuerst dieses Skript für die Katze:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
-[falls <wird Mauszeiger berührt?>]       ← Steuerung (orange) / Fühlen (hellblau)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
+[falls <wird Mauszeiger berührt?> dann]  ← Steuerung (orange) / Fühlen (hellblau)
     [sage "Hab dich!" für 0.5 Sekunden]  ← Aussehen (lila)
 ```
 
@@ -100,16 +98,18 @@ Baue zuerst dieses Skript für die Katze:
 
 Baue das Skript jetzt um. Die Bedingung kommt **in eine Schleife**:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
-[wiederhole fortlaufend]                 ← Steuerung (orange)
-    [falls <wird Mauszeiger berührt?>]   ← Steuerung (orange) / Fühlen (hellblau)
-        [sage "Hab dich!" für 0.5 Sekunden]  ← Aussehen (lila)
+> 💡 **So liest du die Skripte ab jetzt:** Zeilen mit **+** sind neu, die baust du ein. Zeilen mit **-** nimmst du heraus. **⋮** steht für Blöcke, die bleiben, wie sie sind. Alle anderen Zeilen hast du schon.
+
+```diff
+  [Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
++ [wiederhole fortlaufend]                 ← Steuerung (orange)
+      [falls <wird Mauszeiger berührt?> dann] ← Steuerung (orange) / Fühlen (hellblau)
+          [sage "Hab dich!" für 0.5 Sekunden]  ← Aussehen (lila)
 ```
 
 **Teste:** Bewege den Mauszeiger jetzt auf die Katze und wieder weg. Was ist anders als vorher?
 
-> 💡 **Merke:** Ein „falls" prüft **nur einmal**, nämlich genau dann, wenn Scratch an dem Block ankommt. Damit das Spiel **ständig** prüft, muss das „falls" **in einer Schleife** stecken – wie der Torwart, der den Ball die ganze Zeit beobachtet.
+> 💡 **Merke:** Ein „falls" prüft **nur einmal**, nämlich genau dann, wenn Scratch an dem Block ankommt. Damit das Spiel **ständig** prüft, muss das „falls" **in einer Schleife** stecken – wie die Supermarkttür, die immer wieder prüft, ob jemand davorsteht.
 
 Hake ab:
 
@@ -121,12 +121,12 @@ Hake ab:
 
 Jetzt eine Schleife, die von selbst aufhört, und eine Bedingung darin. Lösche das alte Skript der Katze und baue dieses neue Skript:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [gehe zu x: 0 y: 150]                    ← Bewegung (blau)
-[wiederhole bis <y-Position < -150>]     ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
+[wiederhole bis <(y-Position) < -150>]   ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
     [ändere y um -5]                     ← Bewegung (blau)
-    [falls <wird Mauszeiger berührt?>]   ← Steuerung (orange) / Fühlen (hellblau)
+    [falls <wird Mauszeiger berührt?> dann] ← Steuerung (orange) / Fühlen (hellblau)
         [sage "Gefangen!" für 0.5 Sekunden]  ← Aussehen (lila)
 [sage "Unten angekommen!" für 2 Sekunden]  ← Aussehen (lila)
 ```
@@ -155,13 +155,13 @@ Hake ab:
 
 Klicke den **Korb** an und baue:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [gehe zu x: 0 y: -130]                   ← Bewegung (blau)
 [wiederhole fortlaufend]                 ← Steuerung (orange)
-    [falls <Taste Pfeil rechts gedrückt?>]   ← Steuerung (orange) / Fühlen (hellblau)
+    [falls <Taste Pfeil rechts gedrückt?> dann] ← Steuerung (orange) / Fühlen (hellblau)
         [ändere x um 10]                 ← Bewegung (blau)
-    [falls <Taste Pfeil links gedrückt?>]    ← Steuerung (orange) / Fühlen (hellblau)
+    [falls <Taste Pfeil links gedrückt?> dann] ← Steuerung (orange) / Fühlen (hellblau)
         [ändere x um -10]                ← Bewegung (blau)
 ```
 
@@ -177,14 +177,14 @@ Hake ab:
 
 Klicke den **Apfel** an und baue:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
+```text
+[Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
 [setze Punkte auf 0]                     ← Variablen (orange-rot)
 [setze Leben auf 3]                      ← Variablen (orange-rot)
 [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
 [wiederhole fortlaufend]                 ← Steuerung (orange)
     [ändere y um -6]                     ← Bewegung (blau)
-    [falls <y-Position < -165>]          ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
+    [falls <(y-Position) < -165> dann]   ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
         [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
 ```
 
@@ -197,12 +197,18 @@ Hake ab:
 
 ### Schritt 3 – Den Apfel fangen *(7 min)*
 
-Ergänze im Skript des Apfels **in der Schleife** eine zweite Bedingung. Sie kommt direkt unter die erste:
+Klicke den **Apfel** an. Ergänze im Flaggen-Skript **in der Schleife** eine zweite Bedingung, direkt unter die erste:
 
-```
-    [falls <wird Korb berührt?>]         ← Steuerung (orange) / Fühlen (hellblau)
-        [ändere Punkte um 1]             ← Variablen (orange-rot)
-        [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
+```diff
+  [Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
+  ⋮
+  [wiederhole fortlaufend]                 ← Steuerung (orange)
+      [ändere y um -6]                     ← Bewegung (blau)
+      [falls <(y-Position) < -165> dann]   ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
+          [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
++     [falls <wird Korb berührt?> dann]    ← Steuerung (orange) / Fühlen (hellblau)
++         [ändere Punkte um 1]             ← Variablen (orange-rot)
++         [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
 ```
 
 > 💡 **Tipp:** Im Block „wird … berührt?" wählst du aus dem Menü die Figur **Korb** aus.
@@ -222,26 +228,26 @@ Bisher läuft das Spiel für immer. Jetzt bekommt es einen Spielzustand: Es läu
 2. Die Schleife soll aufhören, wenn `Leben` bei 0 ist. Dafür tauschst du „wiederhole fortlaufend" gegen „wiederhole bis".
 3. Wenn du 10 Punkte hast, hast du gewonnen.
 
-Dein Skript für den Apfel sieht danach so aus:
+Ändere das Flaggen-Skript des **Apfels** so:
 
-```
-[Wenn grüne Flagge angeklickt]           ← Ereignisse (gelb)
-[setze Punkte auf 0]                     ← Variablen (orange-rot)
-[setze Leben auf 3]                      ← Variablen (orange-rot)
-[gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
-[wiederhole bis <Leben = 0>]             ← Steuerung (orange) / Operatoren (grün)
-    [ändere y um -6]                     ← Bewegung (blau)
-    [falls <wird Korb berührt?>]         ← Steuerung (orange) / Fühlen (hellblau)
-        [ändere Punkte um 1]             ← Variablen (orange-rot)
-        [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
-    [falls <y-Position < -165>]          ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
-        [ändere Leben um -1]             ← Variablen (orange-rot)
-        [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
-    [falls <Punkte = 10>]                ← Steuerung (orange) / Operatoren (grün)
-        [sage "Gewonnen!" für 2 Sekunden]    ← Aussehen (lila)
-        [stoppe alle]                    ← Steuerung (orange)
-[sage "Game Over!" für 2 Sekunden]       ← Aussehen (lila)
-[stoppe alle]                            ← Steuerung (orange)
+```diff
+  [Wenn grüne Flagge angeklickt wird]      ← Ereignisse (gelb)
+  ⋮
+  [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
+- [wiederhole fortlaufend]                 ← Steuerung (orange)
++ [wiederhole bis <(Leben) = 0>]           ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
+      [ändere y um -6]                     ← Bewegung (blau)
+      [falls <(y-Position) < -165> dann]   ← Steuerung (orange) / Operatoren (grün) / Bewegung (blau)
++         [ändere Leben um -1]             ← Variablen (orange-rot)
+          [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
+      [falls <wird Korb berührt?> dann]    ← Steuerung (orange) / Fühlen (hellblau)
+          [ändere Punkte um 1]             ← Variablen (orange-rot)
+          [gehe zu x: (zufallszahl von -200 bis 200) y: 170]  ← Bewegung (blau) / Operatoren (grün)
++     [falls <(Punkte) = 10> dann]         ← Steuerung (orange) / Operatoren (grün) / Variablen (orange-rot)
++         [sage "Gewonnen!" für 2 Sekunden]    ← Aussehen (lila)
++         [stoppe alles]                   ← Steuerung (orange)
++ [sage "Game Over!" für 2 Sekunden]       ← Aussehen (lila)
++ [stoppe alles]                           ← Steuerung (orange)
 ```
 
 **Teste:** Spiele das Spiel zweimal: einmal, bis du verlierst, und einmal, bis du gewinnst.

@@ -21,6 +21,20 @@ Die Einheiten bauen aufeinander auf. Eine Übersicht mit Konzepten und Lernziele
 - Die Lernkarten enthalten sogenannte Mentorenmomente, in denen die Kinder und Jugendlichen Ihre Erkenntnisse mit den Mentorinnen und Mentoren besprechen.
 - Mentorinnen und Mentoren zeigen nicht einfach die Lösung auf, sondern versuchen die Kinder und Jugendlichen durch Fragen und Hinweise darin zu unterstützen, selbst auf die Lösung zukommen.
 
+## PDFs erzeugen
+
+Die Lernkarten lassen sich als A4-PDFs (Hochformat) ausgeben. Voraussetzung sind Miniconda (oder Anaconda) und Chromium (Snap-Installation unter `/snap/bin/chromium`).
+
+```
+conda create -n codeclub python
+conda activate codeclub
+pip install -r tools/requirements.txt
+python tools/build_pdf.py        # alle Einheiten
+python tools/build_pdf.py 1 4    # nur Einheit 1 und 4
+```
+
+Die PDFs landen im Ordner `pdf/`. Das Aussehen wird in `tools/style.css` festgelegt, Logo, Kopf- und Fußzeile in `tools/build_pdf.py`.
+
 ## Mitmachen
 
 Verbesserungsvorschläge und Korrekturen sind willkommen, zum Beispiel über Issues oder Pull Requests.
